@@ -1,0 +1,13 @@
+package fitnessFunc;
+
+import algo.BitString;
+
+public class HIFF implements Fitness {
+    public String getName() {
+        return "HIFF";
+    }
+
+	public int fitness(BitString a, int k) {
+		return a.hiffComponent(false) + a.hiffComponent(true);
+	}
+}

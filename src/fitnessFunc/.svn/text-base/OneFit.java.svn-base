@@ -1,0 +1,13 @@
+package fitnessFunc;
+
+import algo.BitString;
+
+public class OneFit implements Fitness {
+    public String getName() {
+        return "OneFit";
+    }
+
+	public int fitness(BitString a, int k) {
+		return a.bitCount();
+	}
+}

@@ -1,0 +1,13 @@
+package fitnessFunc;
+
+import algo.BitString;
+
+public class Xdivk implements Fitness {
+    public String getName() {
+        return "Xdivk";
+    }
+
+	public int fitness(BitString a, int k) {
+		return a.bitCount()/k;
+	}
+}

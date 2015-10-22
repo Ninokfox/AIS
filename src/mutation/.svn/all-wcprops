@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/13/trunk/AIS/src/mutation
+END
+Mutation.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/11/trunk/AIS/src/mutation/Mutation.java
+END
+MutRLS.java
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/11/trunk/AIS/src/mutation/MutRLS.java
+END
+MutEA.java
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/13/trunk/AIS/src/mutation/MutEA.java
+END
+MutBCA.java
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/11/trunk/AIS/src/mutation/MutBCA.java
+END

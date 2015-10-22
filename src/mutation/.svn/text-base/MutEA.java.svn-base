@@ -1,0 +1,29 @@
+package mutation;
+
+import algo.BitString;
+
+import java.util.Random;
+
+public class MutEA implements Mutation {
+    public String getName() {
+        return "EA";
+    }
+	//����������� 1/n
+	public static boolean getRandom(int len, Random random) {	    
+        return random.nextInt(len) == 0;
+    }
+	//����������� 2/n
+	public static boolean getRandom2(int len, Random random) {	    
+        return random.nextInt(len) <= 1;
+    }
+
+	public BitString mutate(BitString a, Random random) {
+		BitString mutated = a.clone();
+		for (int i = 0; i < mutated.size(); ++i) {
+			if (getRandom(mutated.size(), random)) {
+				mutated.flip(i);
+			}
+		}
+		return mutated;
+	}
+}

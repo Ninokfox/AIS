@@ -1,0 +1,17 @@
+package fitnessFunc;
+
+import algo.BitString;
+
+public class LeadingOnes implements Fitness{
+	
+	    public String getName() {
+	        return "LeadingOnes";
+	    }
+
+		public int fitness(BitString a, int k) {
+			return a.leadingOnes();
+		}
+	}
+
+
+

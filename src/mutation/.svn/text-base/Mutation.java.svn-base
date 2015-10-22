@@ -1,0 +1,10 @@
+package mutation;
+
+import algo.BitString;
+
+import java.util.Random;
+
+public interface Mutation {
+    public BitString mutate(BitString individual, Random random);
+    public String getName();
+}

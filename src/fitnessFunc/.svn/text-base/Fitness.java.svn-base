@@ -1,0 +1,8 @@
+package fitnessFunc;
+
+import algo.BitString;
+
+public interface Fitness {
+    public int fitness(BitString individual, int k);
+    public String getName();
+}
