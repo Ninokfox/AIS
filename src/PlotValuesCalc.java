@@ -60,7 +60,7 @@ public class PlotValuesCalc {
 		double alpha = 0.7;
 		double gamma = 0.7;
 		double eps = 0.0;
-		ArrayList<ArrayList<Integer>> sum1 = new ArrayList<ArrayList<Integer>>();
+		
 
 		Mutation[] mutation = new Mutation[mut.length];
 		
@@ -137,6 +137,7 @@ public class PlotValuesCalc {
 		new File(experimentRoot2).mkdirs();
 		for (int i = 0; i < mut.length; ++i) {
 			ArrayList<ArrayList<Integer>> sum = new ArrayList<ArrayList<Integer>>();
+			ArrayList<ArrayList<Integer>> sum1 = new ArrayList<ArrayList<Integer>>();
 			for (int j = 0; j < rounds; ++j) {	
 				if (al >= 1) {
 					ArrayList<Integer> fit =  ql.run(d, k, critNum, SIZE, steps, fitness, mutation[i], alpha, gamma, eps);	

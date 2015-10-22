@@ -121,11 +121,11 @@ public class DeviationRendSaved extends ApplicationFrame {
     	String hybrid3 = "CLONALG+RLS(50%)";
     	String hybrid4 = "CLONALG+RLS(ns)";
     	String hybrid5 = "CLONALG+RLS(ns+target)";
-    	String[] a = {"RLS", "CLONALG", "EA", "BCA"};      
+    	String[] a = {"RLS", "CLONALG", hybrid3, "m" + hybrid3, "BCA", hybrid4, "m" + hybrid4, "m"+hybrid5};//, hybrid4, hybrid3, "m" + hybrid4, "m" + hybrid5 };      
     	//a += {"mRLS", "mCLONALG", "mEA", "mBCA"};
     	String problem = "Xdivk";
     	int critNum = 2;
-    	int steps = 60000;
+    	int steps = 50000;
     	
     	int SIZE = 400;    	
     	int k = 1;
@@ -135,26 +135,31 @@ public class DeviationRendSaved extends ApplicationFrame {
 				SIZE = 64;	
 				k = 1;
 				d = 0;
+				
 				break;
 			case "MinMax":
 				SIZE = 400;	
 				k = 10;
 				d = 266;
+				critNum = 3;
 			    break;
 			case "OneMax":
 				SIZE = 1000;	
 				k = 1;
 				d = 0;
+				critNum = 2;
 			    break;
 			case "Xdivk":
 				SIZE = 100;	
 				k = 5;
 				d = 0;
+				critNum = 2;
 			    break;
 			case "LeadingOnes":
 				SIZE = 1000;	
 				k = 1;
-				d = 0;		
+				d = 0;	
+				critNum = 2;
 			    break;
 			default:
 				throw new IllegalArgumentException("Invalid problem name: " + problem);	

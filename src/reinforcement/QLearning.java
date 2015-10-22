@@ -36,36 +36,22 @@ public class QLearning {
 				} else {
 					f = Util.ffchooser(Q, critNum, random);	
 				}
-				//System.out.println("f = " + f);
-				/*if (f == 1) {
-					System.out.println("NYYYYYYYAAAAAA!!!");
-				}*/
-				/*if (f == 1) {
-					System.out.println("f = " + f);
-					System.out.println(fitness.fitness(ind, 0, k, d) + " " + fitness.fitness(ind, 1, k, d));
-					
-				}*/
-				//System.out.println("f = " + f);
+				
 								
 				BitString y = mutation.mutateM(ind, random, fitness, k, d, f); //если вместо f взять critNum, то CLONALG решает LO успешнее.
 				
 				if (fitness.fitness(y, f, k, d) >= fitness.fitness(ind, f, k, d)) { //если брать >, то EA и CLONALG улучшаются. 
 					ind = y;
 				}	
-				/*if (f == 1) {
-					System.out.println(fitness.fitness(ind, 0, k, d) + " " + fitness.fitness(ind, 1, k, d));
-					System.out.println("-------------------------------");
-				}*/
+				
 				ff.add(fitness.fitness(ind, 0, k, d));
 				double r = Reward.reward(d, k, ind, prev, 0, fitness);
-				//System.out.println("r = " + r);
+				
 				double m = Util.max(Q, critNum);
 				Q[f] = Q[f] + alpha * (r + gamma * m - Q[f]);	
-				//System.out.println("Q = " + Q[f] + Q[1-f]);
-			//}
-			//else break;
+				
 		}
-		//System.out.println(ff.get(ff.size() - 1));
+		
 		return ff;
 	}
 }

@@ -123,11 +123,12 @@ public class DeviationRend extends ApplicationFrame {
     }
 
     public static void main(String args[]) throws IOException {
-    	int alnum = 2;
-    	String[] mut = {"RLS", "CLONALG", "EA", "BCA"};//, "HYBRID1", "HYBRID2", "HYBRID3", "HYBRID4", "HYBRID5"};//"EA"};
-    	String problem = "Xdivk";
-    	int critNum = 2;
-    	int steps = 60000;
+    	int alnum = 0;
+    	String[] mut = {"RLS","CLONALG", "EA", "BCA"};//, "HYBRID1", "HYBRID2", "HYBRID3", "HYBRID4", "HYBRID5"};//"EA"};
+    	String problem = "HIFF";
+    	//!!! HIFF critNum !!!
+    	int critNum = 3;
+    	int steps = 100000;
     	
     	int SIZE = 400;    	
     	int k = 1;
@@ -142,27 +143,32 @@ public class DeviationRend extends ApplicationFrame {
 				SIZE = 400;	
 				k = 10;
 				d = 266;
+				critNum = 3;
 			    break;
 			case "OneMax":
 				SIZE = 1000;	
 				k = 1;
 				d = 0;
+				critNum = 2;
 			    break;
 			case "Xdivk":
 				SIZE = 100;	
 				k = 5;
 				d = 0;
+				critNum = 2;
 			    break;
 			case "LeadingOnes":
-				SIZE = 1000;	
+				SIZE = 100;	
 				k = 1;
-				d = 0;		
+				d = 0;	
+				critNum = 2;
 			    break;
 			default:
 				throw new IllegalArgumentException("Invalid problem name: " + problem);	
 		}
 
-    	PlotValuesCalc.main(SIZE, critNum, steps, k, d, alnum, mut, problem);
+    	//PlotValuesCalc.main(SIZE, critNum, steps, k, d, alnum, mut, problem);
+    	Runtime.main(SIZE, critNum, steps, k, d, alnum, mut, problem);
         /*DeviationRend deviationrendererdemo1 = new DeviationRend("JFreeChart : DeviationRenderer", problem, alnum);
         deviationrendererdemo1.pack();
         RefineryUtilities.centerFrameOnScreen(deviationrendererdemo1);
