@@ -1,2 +1,2 @@
 # AIS
-artificial immune sistems in optimization
+artificial immune systems in optimization
