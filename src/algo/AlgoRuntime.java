@@ -21,7 +21,8 @@ public class AlgoRuntime {
 		ff.add(fitness.fitness(ind, k));
 		//System.out.println(ind);
 		for (int t = 0; t < evSize; t++){
-			if (ff.get(ff.size() - 1) != individLen/k) {
+			int f = fitness.maxValue(individLen, k);
+			if (ff.get(ff.size() - 1) != f) {
 				//System.out.println(ff.get(ff.size() - 1));
 				BitString mutated = mutation.mutate(ind, random, fitness, k);
 				//System.out.println(mutated);

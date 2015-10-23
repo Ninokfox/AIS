@@ -27,7 +27,7 @@ public class QLRuntime {
 		
 		ff.add(fitness.fitness(ind, 0, k, d));  	
 		for (int t = 0; t < evSize; t++){
-			if (ff.get(ff.size() - 1) != individLen/k) {
+			if (ff.get(ff.size() - 1) != fitness.maxValue(individLen, 0, k, d)) {
 				BitString prev = ind;
 				int f;
 				if (Util.getRandom(e, random)) {
